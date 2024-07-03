@@ -42,7 +42,7 @@ export default function ClassickStudios() {
   }, [count]);
 
   return (
-    <div className={styles.projCont}>
+    <div id="classick" className={styles.projCont}>
       <div
         className={styles.projBack}
         style={{

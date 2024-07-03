@@ -10,7 +10,7 @@ export default function Featwork() {
         <div className={styles.featScrollCont}>
           <div className={styles.featWorkInd}>
             <div className={styles.imgCont}>
-              <Link href="/classickstudios">
+              <Link href="/classickstudios#classick">
                 <Image
                   alt="Classick Studios engineer sitting at a computer"
                   fill
