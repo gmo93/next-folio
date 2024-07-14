@@ -4,31 +4,35 @@ import Image from "next/image";
 export default function ClassickStudios() {
   const [headTitle, setHeadTitle] = useState("");
   const [count, setCount] = useState(0);
+  const [prevSlide, setPrevSlide] = useState(0);
   const [trans, setTrans] = useState("translateX(100vw)");
   const [slideCount, setSlideCount] = useState(0);
   const header = "Classick Studios";
 
   const activeDot = {
-    width: "30px",
-    height: "30px",
-    border: "3px solid white",
-    borderRadius: "50px",
+    width: "90px",
+    height: "10px",
+    border: "1px solid white",
     margin: "15px",
     cursor: "pointer",
-    backgroundColor: "white",
   };
   const inactiveDot = {
-    width: "30px",
-    height: "30px",
-    border: "3px solid white",
-    borderRadius: "50px",
+    width: "90px",
+    height: "10px",
+    border: "1px solid white",
     margin: "15px",
     cursor: "pointer",
+    position: "relative",
   };
+
+  let direction = false;
 
   function handleClick(e) {
     setTrans(e.target.getAttribute("data-transform"));
-    setSlideCount(Number(e.target.getAttribute("data-slide")));
+    setSlideCount((number) => {
+      setPrevSlide(slideCount);
+      return Number(e.target.getAttribute("data-slide"));
+    });
   }
 
   useEffect(() => {
@@ -105,23 +109,51 @@ export default function ClassickStudios() {
             data-transform="translateX(100vw)"
             data-slide="0"
             onClick={handleClick}
-            style={slideCount === 0 ? activeDot : inactiveDot}
+            style={inactiveDot}
             id="dotOne"
-          ></span>
+          >
+            <span
+              className={
+                slideCount === 0 ? styles.dotFilled : styles.dotNotFilled
+              }
+              style={{
+                right: "0",
+              }}
+            ></span>
+          </span>
           <span
             data-slide="1"
             data-transform="translateX(0vw)"
             onClick={handleClick}
-            style={slideCount === 1 ? activeDot : inactiveDot}
+            style={inactiveDot}
             id="dotTwo"
-          ></span>
+          >
+            <span
+              className={
+                slideCount === 1 ? styles.dotFilled : styles.dotNotFilled
+              }
+              style={
+                (prevSlide === 0 && slideCount === 1) ||
+                (prevSlide === 1 && slideCount === 0)
+                  ? { left: "0" }
+                  : { right: "0" }
+              }
+            ></span>
+          </span>
           <span
             data-slide="2"
             data-transform="translateX(-100vw)"
             onClick={handleClick}
-            style={slideCount === 2 ? activeDot : inactiveDot}
+            style={inactiveDot}
             id="dotThree"
-          ></span>
+          >
+            <span
+              className={
+                slideCount === 2 ? styles.dotFilled : styles.dotNotFilled
+              }
+              style={{ left: "0" }}
+            ></span>
+          </span>
         </div>
       </div>
       <Image

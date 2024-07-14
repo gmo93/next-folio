@@ -219,10 +219,9 @@
   display: flex;
 }
 .dot {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 10px;
   border: 3px solid white;
-  border-radius: 50px;
   margin: 15px;
 }
 @keyframes blink {
@@ -252,4 +251,38 @@
 }
 .lockedVid {
   height: 80vh;
+}
+
+@keyframes dotFill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes dotLeave {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+.dotFilled {
+  height: 100%;
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  animation: dotFill 1s;
+}
+
+.dotNotFilled {
+  height: 100%;
+  background-color: white;
+  width: 0%;
+  position: absolute;
+  top: 0;
+  animation: dotLeave 1s;
 }
