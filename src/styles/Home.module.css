@@ -23,16 +23,6 @@
   flex-direction: column;
   justify-content: flex-start;
 }
-.hero {
-  width: 100vw;
-  height: calc(100vh - 100px);
-  background-color: black;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 .heroTextLeft {
   font-size: 80px;
   color: white;
@@ -285,4 +275,57 @@
   position: absolute;
   top: 0;
   animation: dotLeave 1s;
+}
+.clsOne {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 80px;
+}
+
+/* HERO COMP */
+.hero {
+  width: 100vw;
+  height: 200vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.heroImgHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: rotate(-45deg);
+  transition: transform 1s ease-in-out;
+  position: fixed;
+  top: 28vh;
+}
+.heroImgHolder:hover {
+  transform: rotate(0deg);
+  transition: transform 1s ease-in-out;
+}
+.centerHero {
+  height: 60px;
+  background-color: white;
+  margin: 5px auto;
+  width: 400px;
+  border-radius: 50px;
+}
+.oneInHero {
+  height: 60px;
+  background-color: white;
+  margin: 5px auto;
+  width: 330px;
+  border-radius: 50px;
+}
+.outHero {
+  height: 60px;
+  background-color: white;
+  margin: 5px auto;
+  width: 200px;
+  border-radius: 50px;
 }
