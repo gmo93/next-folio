@@ -2,17 +2,59 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import VidSect from "@/components/VidSect";
 import Services from "@/components/Services";
 import Link from "next/link";
 import Featwork from "@/components/Featwork";
+import Scroller from "@/components/Scroller";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [scroll, setScroll] = useState(0);
+  const [rotate, setRotate] = useState(0);
+  const [scale, setScale] = useState(1);
+  const [opacity, setOpacity] = useState(1);
+  const [wheel, setWheel] = useState(0);
+
+  function handleWheel(e) {
+    console.log(e.deltaY);
+    setWheel(e.deltaY);
+    console.log(wheel);
+  }
+
+  function handleScroll(e) {
+    console.log(e);
+    if (
+      window.scrollY / window.innerHeight > 0.025 &&
+      window.scrollY / window.innerHeight < 3
+    ) {
+      setScroll(30);
+      setRotate(45);
+      setScale(6);
+    } else if (
+      window.scrollY / window.innerHeight > 2.99 &&
+      window.scrollY / window.innerHeight < 4.25
+    ) {
+      setScroll(0);
+      setScale(18);
+      setRotate(135);
+    } else if (window.scrollY / window.innerHeight > 4.24) {
+      setScroll(100);
+    } else {
+      setScroll(0);
+      setRotate(0);
+      setScale(1);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("wheel", handleWheel);
+  }, []);
   return (
     <>
       <Head>
@@ -22,10 +64,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <Hero />
+        <Hero scroll={scroll} rotate={rotate} scale={scale} />
         <VidSect />
         <Featwork />
         <Services />
+        <Scroller />
       </main>
     </>
   );

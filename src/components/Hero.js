@@ -1,11 +1,9 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
 
-export default function Hero() {
+export default function Hero({ scroll, rotate, scale, opacity }) {
   const [count, setCount] = useState(0);
-  const [rotate, setRotate] = useState("0");
-  const [scrollPos, setScrollPos] = useState(0);
 
   const wordArr = [
     "Brainstorm",
@@ -19,80 +17,75 @@ export default function Hero() {
     "Envision",
     "Learn",
   ];
-  const [word, setWord] = useState(wordArr[0]);
 
-  function handleScroll() {
-    const pos = window.scrollY;
-    setScrollPos(pos);
-    console.log(window.scrollY);
-  }
-
-  useEffect(() => {
-    setTimeout(() => {
-      setCount((count) => (count += 1));
-      setWord((word) => (word = wordArr[count]));
-    }, "2000");
-  }, [count]);
   return (
-    <div onClick={handleScroll} className={styles.hero}>
-      <div
-        className={styles.heroImgHolder}
-        onMouseOver={() => {
-          setRotate("150%");
-        }}
-        onMouseLeave={() => {
-          setRotate("0%");
-        }}
-      >
-        <span
+    <div id="heroCont" className={styles.hero}>
+      <section className={styles.heroFirst}>
+        <div
+          className={styles.heroImgHolder}
           style={{
-            transform: `translateX(${rotate})`,
-            transition: "transform 1s ease-in-out",
+            transform: `rotate(${rotate}deg) scale(${scale})`,
+            transition: "transform .5s ease-in-out",
+            opacity: { opacity },
           }}
-          className={styles.outHero}
-          id="lineOne"
-        ></span>
-        <span
-          style={{
-            transform: `translateX(-${rotate})`,
-            transition: "transform 1s ease-in-out",
-          }}
-          className={styles.oneInHero}
-          id="lineTwo"
-        ></span>
-        <span
-          style={{
-            transform: `translateX(${rotate})`,
-            transition: "transform 1s ease-in-out",
-          }}
-          className={styles.centerHero}
-          id="lineFour"
-        ></span>
-        <span
-          style={{
-            transform: `translateX(-${rotate})`,
-            transition: "transform 1s ease-in-out",
-          }}
-          className={styles.centerHero}
-          id="lineFour"
-        ></span>
-        <span
-          style={{
-            transform: `translateX(${rotate})`,
-            transition: "transform 1s ease-in-out",
-          }}
-          className={styles.oneInHero}
-          id="lineFive"
-        ></span>
-        <span
-          style={{
-            transform: `translateX(-${rotate})`,
-            transition: "transform 1s ease-in-out",
-          }}
-          className={styles.outHero}
-          id="lineSix"
-        ></span>
-      </div>
+        >
+          <span
+            style={{
+              transform: `translateX(${scroll}%)`,
+              transition: "transform .5s ease-in-out",
+              opacity: { opacity },
+            }}
+            className={styles.outLeftHero}
+            id="lineOne"
+          ></span>
+          <span
+            style={{
+              transform: `translateX(-${scroll}%)`,
+              transition: "transform .5s ease-in-out",
+              opacity: { opacity },
+            }}
+            className={styles.oneInLeftHero}
+            id="lineTwo"
+          ></span>
+          <span
+            style={{
+              transform: `translateX(${scroll}%)`,
+              transition: "transform .5s ease-in-out",
+              opacity: { opacity },
+            }}
+            className={styles.centerLeftHero}
+            id="lineFour"
+          ></span>
+          <span
+            style={{
+              transform: `translateX(-${scroll}%)`,
+              transition: "transform .5s ease-in-out",
+              opacity: { opacity },
+            }}
+            className={styles.centerRightHero}
+            id="lineFour"
+          ></span>
+          <span
+            style={{
+              transform: `translateX(${scroll}%)`,
+              transition: "transform .5s ease-in-out",
+              opacity: { opacity },
+            }}
+            className={styles.oneInRightHero}
+            id="lineFive"
+          ></span>
+          <span
+            style={{
+              transform: `translateX(-${scroll}%)`,
+              transition: "transform .5s ease-in-out",
+              opacity: { opacity },
+            }}
+            className={styles.outRightHero}
+            id="lineSix"
+          ></span>
+        </div>
+      </section>
+      <section className={styles.heroSecond}></section>
     </div>
   );
 }

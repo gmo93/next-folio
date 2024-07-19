@@ -41,7 +41,6 @@
   opacity: 1;
   animation: slideLeft 1s;
 }
-
 .bigVid {
   width: 100vw;
   height: auto;
@@ -285,47 +284,125 @@
 }
 
 /* HERO COMP */
+@keyframes leftShift {
+  0% {
+    transform: translateX(2%);
+  }
+  50% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(2%);
+  }
+}
+@keyframes rightShift {
+  0% {
+    transform: translateX(-2%);
+  }
+  50% {
+    transform: translateX(2%);
+  }
+  100% {
+    transform: translateX(-2%);
+  }
+}
 .hero {
-  width: 100vw;
-  height: 200vh;
   background-color: black;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 .heroImgHolder {
   display: flex;
+  height: 100%;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
-  transform: rotate(-45deg);
-  transition: transform 1s ease-in-out;
   position: fixed;
-  top: 28vh;
+  rotate: -45deg;
 }
-.heroImgHolder:hover {
-  transform: rotate(0deg);
-  transition: transform 1s ease-in-out;
+.heroFirst {
+  height: 100vh;
+  width: 100%;
 }
-.centerHero {
+.heroSecond {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow-y: scroll;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.heroSecond h2 {
+  color: white;
+}
+.heroScroller {
+  height: 200vh;
+  width: 100vw;
+}
+.heroThird {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black !important;
+  background-color: white !important;
+}
+.centerLeftHero {
   height: 60px;
   background-color: white;
   margin: 5px auto;
+  border-radius: 50px;
   width: 400px;
-  border-radius: 50px;
 }
-.oneInHero {
+.centerRightHero {
   height: 60px;
   background-color: white;
   margin: 5px auto;
+  border-radius: 50px;
+  width: 400px;
+}
+.oneInLeftHero {
+  height: 60px;
+  background-color: white;
+  margin: 5px auto;
+  border-radius: 50px;
   width: 330px;
-  border-radius: 50px;
 }
-.outHero {
+.oneInRightHero {
   height: 60px;
   background-color: white;
   margin: 5px auto;
-  width: 200px;
   border-radius: 50px;
+  width: 330px;
+}
+.outLeftHero {
+  height: 60px;
+  background-color: white;
+  margin: 5px auto;
+  border-radius: 50px;
+  width: 200px;
+}
+.outRightHero {
+  height: 60px;
+  background-color: white;
+  margin: 5px auto;
+  border-radius: 50px;
+  width: 200px;
+}
+.heroScrollBox {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  scroll-snap-type: y mandatory;
+  scroll-snap-points-y: repeat(100vh);
+}
+.scrollerCont {
+  height: 100vh;
+  width: 100vw;
+}
+.scrollerCont section {
+  width: 100vw;
+  height: 100vh;
 }

@@ -4,7 +4,7 @@ import styles from "@/styles/Home.module.css";
 
 export default function Featwork() {
   return (
-    <div className={styles.featWorkCont}>
+    <section className={styles.featWorkCont}>
       <h2>Featured Work</h2>
       <div className={styles.featWorkProjCont}>
         <div className={styles.featScrollCont}>
@@ -14,6 +14,7 @@ export default function Featwork() {
                 <Image
                   alt="Classick Studios engineer sitting at a computer"
                   fill
+                  static="true"
                   src="/lockedInTee.jpg"
                 />
               </Link>
@@ -26,6 +27,7 @@ export default function Featwork() {
               <Image
                 alt="Someone holding a N/A beer can"
                 fill
+                static="true"
                 src="/gtbDumbo.jpg"
               />
             </div>
@@ -37,6 +39,7 @@ export default function Featwork() {
               <Image
                 alt="Someone at the beach wearing the Dakota Ridge waterproof boots"
                 fill
+                static="true"
                 src="/shopDakotaRidge.webp"
               />
             </div>
@@ -48,6 +51,7 @@ export default function Featwork() {
               <Image
                 alt="a rope being wrapped around fasteners"
                 fill
+                static="true"
                 src="/rope.jpg"
               />
             </div>
@@ -59,6 +63,7 @@ export default function Featwork() {
               <Image
                 alt="a sandbar sitting in sand beside the salve"
                 fill
+                static="true"
                 src="/sbInSandAlt.jpg"
               />
             </div>
@@ -67,6 +72,6 @@ export default function Featwork() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
