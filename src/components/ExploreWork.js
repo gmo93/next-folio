@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function ExploreWork({ statCont, abso }) {
+export default function ExploreWork() {
   const [expImage, setExpImage] = useState("/gtbDumbo.jpg");
   const [projTitle, setProjTitle] = useState("Good Time Brewing");
   const [projNumber, setProjNumber] = useState(0);
@@ -31,9 +31,7 @@ export default function ExploreWork({ statCont, abso }) {
   ];
 
   return (
-    <section
-      className={abso ? styles.exploreWorkContEnd : styles.exploreWorkCont}
-    >
+    <section className={styles.exploreWorkCont}>
       <div className={styles.exploreScrollCont}>
         <div className={styles.exploreTextCont}>
           Explore our list of clients and websites we&apos;ve worked on. From
@@ -92,13 +90,7 @@ export default function ExploreWork({ statCont, abso }) {
         </div>
       </div>
       <div className={styles.exploreStat}>
-        <div
-          className={
-            statCont
-              ? styles.exploreStatContFixed
-              : styles.exploreStatContRelative
-          }
-        >
+        <div className={styles.exploreStatContRelative}>
           <div className={styles.exploreTopCont}>
             <div className={styles.exploreTopLeft}>
               <h3>Projects</h3>
