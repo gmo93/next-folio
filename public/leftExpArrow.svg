@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850.21 778.37">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 80px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2-2" data-name="Layer 2">
+    <line className={styles.leftExpArrow} x1="56.1" y1="387.27" x2="850.21" y2="387.27"/>
+    <polyline className={styles.leftExpArrow} points="411.26 28.13 56.1 387.27 411.26 750.4"/>
+  </g>
+</svg>

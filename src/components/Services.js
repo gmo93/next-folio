@@ -10,9 +10,7 @@ export default function Services() {
 
   return (
     <div className={styles.serviceCont}>
-      <div className={styles.servicePhoto}>
-        <img src={servImg} />
-      </div>
+      <div className={styles.servicePhoto}></div>
       <div className={styles.serviceList}>
         <ul>
           <li onMouseOver={logData} data-site="/rope.jpg" id="web-dev">

@@ -23,6 +23,327 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+/* Header Component */
+.header * {
+  color: white;
+  font-weight: 500;
+}
+/* Hero Component */
+.heroSect {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  display: flex;
+  padding: 50px;
+}
+.heroSect * {
+  color: white;
+}
+.heroTextCont {
+  width: 50vw;
+  height: 100%;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.heroMission {
+  width: 60%;
+  font-weight: 300;
+}
+.heroLogoSide {
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heroLogoSide svg {
+  width: 70%;
+}
+.logoTwo {
+  fill: #fff;
+  stroke-width: 0px;
+}
+.logoOne {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 40px;
+}
+.heroSect h1 {
+  font-size: 150px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.pillowLogoHero {
+  position: fixed;
+  transform: translateX(10%) scale(1);
+  transition: transform 1s ease-in-out;
+  z-index: 3;
+  height: 100%;
+}
+.pillowLogoBigText {
+  position: fixed;
+  transform: translateX(-40%) scale(0.4);
+  transition: transform 1s ease-in-out;
+}
+.pillowLogoDone {
+  position: fixed;
+  transform: translateX(-160%);
+  transition: transform 1s ease-in-out;
+}
+.pillowLogoHidden {
+  opacity: 0;
+}
+.pillowOne {
+  fill: lightgray;
+}
+.pillowOne,
+.pillowTwo {
+  stroke: black;
+  stroke-miterlimit: 10;
+}
+.pillowTwo {
+  fill: #000;
+}
+.pillowThree {
+  fill: rgb(237, 237, 237);
+}
+.topLine {
+  z-index: 5;
+}
+.middleLine {
+  z-index: 1;
+  position: relative;
+}
+/* Big Text Component */
+.bigTextCont {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bigTextCont h2 {
+  font-size: 150px;
+  color: white;
+  width: 65%;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* ExploreWork Component */
+.exploreWorkCont {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  padding: 50px;
+  justify-content: space-around;
+}
+.exploreWorkContEnd {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  padding: 50px;
+  justify-content: space-around;
+  align-items: flex-end;
+  color: white;
+}
+.exploreWorkCont * {
+  color: white;
+}
+.exploreScrollCont {
+  width: 40vw;
+  height: 100%;
+}
+.exploreTextCont {
+  height: 100vh;
+  width: 100%;
+  font-size: 100px;
+  line-height: 1;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.exploreStat {
+  width: 40vw;
+  height: 80vh;
+}
+.exploreStatContFixed {
+  top: 10%;
+  height: 80vh;
+  width: 40vw;
+  border: 1px solid white;
+  position: fixed;
+}
+.exploreStatContRelative {
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  position: relative;
+}
+.exploreTopCont {
+  width: 100%;
+  height: 200px;
+  border-bottom: 1px solid white;
+  font-size: 50px;
+  text-transform: uppercase;
+  display: flex;
+}
+.exploreTopLeft {
+  width: 60%;
+  height: 100%;
+  border-right: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exploreList {
+  width: 100%;
+}
+.exploreList ul {
+  width: 100%;
+}
+.exploreList ul li {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  list-style-type: none;
+  padding: 30px 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 4px solid white;
+  cursor: pointer;
+}
+.exploreList ul li:hover {
+  background-color: rgb(250 250 250 / 5%);
+}
+.exploreList ul li a {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+}
+.exploreList ul li p {
+  opacity: 0.4;
+}
+.exploreArrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 40%;
+}
+.leftArrowCont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid white;
+  cursor: pointer;
+}
+.leftArrowCont:hover {
+  background-color: rgb(250 250 250 / 5%);
+}
+.rightArrowCont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.rightArrowCont:hover {
+  background-color: rgb(250 250 250 / 5%);
+}
+.expArrowCont {
+  height: 30%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftExpArrowCont {
+  height: 30%;
+  width: 30%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid white;
+}
+.expArrow {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 80px;
+}
+.exploreMiddleCont {
+  height: calc(100% - 400px);
+}
+.exploreMiddleImageCont {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.exploreMiddleImageCont img {
+  object-fit: cover;
+}
+.exploreBottomCont {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid white;
+}
+.exploreBottomCont h4 {
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+/* .hero {
+  background-color: black;
+}
+.heroImgHolder {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  rotate: -45deg;
+}
+.heroFirst {
+  height: 100vh;
+  width: 100%;
+}
+.heroSecond {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.heroSecond h2 {
+  color: white;
+}
+
+.heroScroller {
+  height: 200vh;
+  width: 100vw;
+}
+.heroThird {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black !important;
+  background-color: white !important;
+}
 .heroTextLeft {
   font-size: 80px;
   color: white;
@@ -40,7 +361,7 @@
   font-weight: 600;
   opacity: 1;
   animation: slideLeft 1s;
-}
+} */
 .bigVid {
   width: 100vw;
   height: auto;
@@ -67,6 +388,8 @@
 .featScrollCont {
   display: flex;
   width: auto;
+  background-color: black;
+  z-index: 10;
 }
 .featWorkInd {
   width: 33vw;
@@ -122,6 +445,12 @@
   opacity: 1;
   transform: translateX(50px);
   transition: transform 0.25s ease-in-out;
+}
+/* Scene Component */
+.sceneCont {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(99, 222, 253);
 }
 
 /* PROJECT PAGES STYLING */
@@ -212,6 +541,44 @@
   height: 10px;
   border: 3px solid white;
   margin: 15px;
+}
+
+/* Javascript logo section*/
+.jsCont {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+  border-radius: 50px;
+}
+.jsSVG {
+  rotate: -90deg;
+  border-radius: 10px;
+}
+.jsOne {
+  fill: #fff;
+  stroke: #000;
+  stroke-miterlimit: 10;
+}
+.jsTwo {
+  fill: #000;
+  stroke-width: 0px;
+}
+.nameOne {
+  fill: #e82828;
+}
+.nameTwo {
+  fill: #fff;
+}
+.nameOne,
+.nameTwo {
+  stroke-width: 0px;
+}
+.nameThree {
+  fill: #000;
+  stroke: #000;
+  stroke-miterlimit: 10;
 }
 @keyframes blink {
   0% {
@@ -306,45 +673,6 @@
     transform: translateX(-2%);
   }
 }
-.hero {
-  background-color: black;
-}
-.heroImgHolder {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  rotate: -45deg;
-}
-.heroFirst {
-  height: 100vh;
-  width: 100%;
-}
-.heroSecond {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  overflow-y: scroll;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.heroSecond h2 {
-  color: white;
-}
-.heroScroller {
-  height: 200vh;
-  width: 100vw;
-}
-.heroThird {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black !important;
-  background-color: white !important;
-}
 .centerLeftHero {
   height: 60px;
   background-color: white;
@@ -405,4 +733,42 @@
 .scrollerCont section {
   width: 100vw;
   height: 100vh;
+}
+/* RollLoader Component */
+.rollLoadCont {
+  height: 100vh;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.rollLoadCont * {
+  color: var(--yellow-color);
+  font-size: 125px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.rollLoadHead {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: right;
+}
+.rollLoadDesc {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: left;
+}
+/* About Component  */
+.aboutCont {
+  height: 100vh;
+  overflow-y: scroll;
+  width: 100vw;
 }
