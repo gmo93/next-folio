@@ -229,7 +229,7 @@ export default function OtherServ() {
                 style={{
                   height: "50%",
                   width: "100%",
-                  padding: "15%",
+                  padding: "20%",
                   fill: "white",
                 }}
                 xmlns="http://www.w3.org/2000/svg"
@@ -248,9 +248,22 @@ export default function OtherServ() {
             </div>
           </li>
           <li>
-            <div className={styles.otherIconCont}></div>
+            <div className={styles.otherIconCont}>
+              <svg
+                style={{
+                  height: "50%",
+                  width: "100%",
+                  padding: "20%",
+                  fill: "white",
+                }}
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path d="M160 80c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 352c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-352zM0 272c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 160c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48L0 272zM368 96l32 0c26.5 0 48 21.5 48 48l0 288c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48z" />
+              </svg>
+            </div>
             <div className={styles.otherRightText}>
-              <h3>Search Engine Optimization (SEO)</h3>
+              <h3>Search Engine Optimization</h3>
               <h4>Get your brand or product noticed online with SEO.</h4>
               {/* <Link src=""></Link> */}
             </div>
