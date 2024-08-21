@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useState, useEffect, useRef } from "react";
+import { useInView, InView } from "react-intersection-observer";
 
 // Components
 import Header from "@/components/Header";
@@ -12,43 +13,21 @@ import Featwork from "@/components/Featwork";
 import BigText from "@/components/BigText";
 import ExploreWork from "@/components/ExploreWork";
 import OtherServ from "@/components/OtherServ";
+import ContactUs from "@/components/Contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const scrollRef = useRef(null);
+  const [tuckedIn, setTuckedIn] = useState(false);
 
-  const [heroScroll, setHeroScroll] = useState(false);
-  const [bigScroll, setBigScroll] = useState(false);
-
-  let firstY = 2.2;
-  let firstYPillow = 1.95;
-  let secondY = 3.13;
-  let thirdY = 4;
-
-  function handleScroll(e) {
-    let windLoc = window.scrollY / window.innerHeight;
-    console.log(window.scrollY / window.innerHeight);
-    if (windLoc >= firstY) {
-      if (windLoc >= firstY && windLoc < secondY) {
-        setBigScroll(true);
-        setHeroScroll(true);
-      } else {
-        return;
-      }
-    } else if (windLoc >= 0.4 && windLoc < firstY) {
-      setHeroScroll(true);
-    } else if (windLoc < 0.4) {
-      setHeroScroll(false);
-      setBigScroll(false);
+  const setInView = (inView) => {
+    if (inView) {
+      setTuckedIn(true);
+      console.log(inView);
     } else {
-      return;
+      console.log("not in view");
     }
-  }
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  }, []);
+  };
   return (
     <>
       <Head>
@@ -57,11 +36,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main ref={scrollRef} className={`${styles.main} ${inter.className}`}>
-        <Hero heroScroll={heroScroll} bigScroll={bigScroll} />
-        <BigText />
+      <main className={`${styles.main} ${inter.className}`}>
+        <Hero />
+        <InView onChange={setInView} threshold={0.8}>
+          <BigText tuckedIn={tuckedIn} />
+        </InView>
         <ExploreWork />
-        <OtherServ />
+        <ContactUs />
       </main>
     </>
   );

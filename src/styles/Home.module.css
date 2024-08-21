@@ -33,17 +33,23 @@
   width: 100vw;
   height: calc(100vh - 100px);
   display: flex;
+  align-items: center;
 }
 .heroSect * {
   color: white;
 }
+.heroSect h1 {
+  font-size: 150px;
+  line-height: 1;
+  text-transform: uppercase;
+}
 .heroTextCont {
   width: 50vw;
-  height: 100%;
+  height: 90%;
   padding: 0 50px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .heroMission {
   width: 60%;
@@ -57,7 +63,7 @@
   align-items: center;
 }
 .heroLogoSide svg {
-  width: 70%;
+  width: 100%;
 }
 .logoTwo {
   fill: #fff;
@@ -68,11 +74,6 @@
   stroke: #fff;
   stroke-miterlimit: 10;
   stroke-width: 40px;
-}
-.heroSect h1 {
-  font-size: 150px;
-  line-height: 1;
-  text-transform: uppercase;
 }
 .pillowLogoHero {
   position: fixed;
@@ -95,7 +96,7 @@
   opacity: 0;
 }
 .pillowOne {
-  fill: lightgray;
+  fill: #161616;
 }
 .pillowOne,
 .pillowTwo {
@@ -106,10 +107,11 @@
   fill: #000;
 }
 .pillowThree {
-  fill: rgb(237, 237, 237);
+  fill: white;
 }
 .topLine {
   z-index: 5;
+  position: relative;
 }
 .middleLine {
   z-index: 1;
@@ -117,22 +119,66 @@
 }
 /* Big Text Component */
 .bigTextCont {
-  height: 150vh;
-  width: 95vw;
+  height: 100vh;
+  width: 100vw;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .bigTextCont h2 {
   font-size: 150px;
-  color: white;
+  color: #fcfcfc;
   width: 65%;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
 }
+.bigTextPillow {
+  position: absolute;
+  width: 40%;
+  height: auto;
+  top: 5%;
+  left: 30%;
+  transition: transform 2s;
+  rotate: 10deg;
+}
+.comfortTwo {
+  stroke: #000;
+  stroke-miterlimit: 10;
+  fill: #161616;
+  transition: transform 3s;
+}
 
+.comfortTwoHidden {
+  opacity: 0;
+}
+.comforter {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.nocomforter {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  display: none;
+}
+.zzzGif {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  height: 20%;
+  width: auto;
+  z-index: 10;
+}
 /* ExploreWork Component */
 .exploreWorkCont {
   min-height: 100vh;
@@ -140,6 +186,7 @@
   display: flex;
   justify-content: space-around;
   position: relative;
+  padding: 100px 0;
 }
 .exploreWorkContEnd {
   min-height: 100vh;
@@ -229,7 +276,6 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0 10px;
 }
 .exploreList ul li p {
   opacity: 0.4;
@@ -828,4 +874,44 @@
 }
 .pillowLetters {
   animation: textSpin 25s infinite linear;
+}
+/* Contact Us Page Section */
+.contactUs {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactUs h2 {
+  color: white;
+}
+/* Laptop Sizing Section */
+@media only screen and (min-width: 1400px) and (max-width: 1800px) {
+  .heroSect h1 {
+    font-size: 90px;
+  }
+  .exploreStat {
+    height: 700px;
+    width: 650px;
+  }
+  .exploreTextCont {
+    font-size: 60px;
+  }
+  .exploreTopCont {
+    height: 100px;
+  }
+  .exploreMiddleCont {
+    height: calc(100% - 200px);
+  }
+  .exploreBottomCont {
+    height: 100px;
+  }
+  .exploreList ul li {
+    font-size: 40px;
+  }
+  /* Big Text Laptop Page Sect */
+  .bigTextCont h2 {
+    font-size: 120px;
+  }
 }

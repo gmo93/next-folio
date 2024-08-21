@@ -34,8 +34,10 @@ export default function ExploreWork() {
     <section className={styles.exploreWorkCont}>
       <div className={styles.exploreScrollCont}>
         <div className={styles.exploreTextCont}>
-          Explore our list of clients and websites we&apos;ve worked on. From
-          building a site from scratch, to adding new features as you scale.
+          Explore a list of website owners who have gotten their doctor
+          recommended 8-9 hours of sleep a night. For some of them, I built
+          their sites from scratch. Others I just added features to existing
+          sites.
         </div>
         <div id="exploreListCont" className={styles.exploreList}>
           <ul>

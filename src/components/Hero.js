@@ -4,27 +4,13 @@ export default function Hero({ heroScroll, bigScroll }) {
     <section className={styles.heroSect}>
       <div className={styles.heroTextCont}>
         <p className={styles.heroMission}>
-          The mission: Build websites and applications that captivate, educate,
-          and inspire. So much of our experiences today are online, so why not
-          make them as fun and engaging as possible.
+          <strong>The Mission:</strong> Help you and your team get a good
+          night&apos;s rest. <strong>How?</strong> Code. Create. Care. Listen.
+          Adjust. Learn. Support.
         </p>
         <h1>
           Front End Dev<br></br> JS / HTML / CSS / React / Next.JS
         </h1>
-        <div className={styles.heroEmailForm}>
-          <p>
-            *No promises you will sleep better, but I&apos;ll be damned if that
-            bed isn&apos;t at least a little cozier.
-          </p>
-          <div className={styles.heroEmailBtnCont}>
-            <a href="" className={styles.heroContactBtn}>
-              Contact Me
-            </a>
-            <a href="" className={styles.heroScrollBtn}>
-              Scroll to Explore
-            </a>
-          </div>
-        </div>
       </div>
       <div className={styles.heroLogoSide}>
         <svg
@@ -32,15 +18,7 @@ export default function Hero({ heroScroll, bigScroll }) {
           data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 626.68 491.53"
-          className={
-            heroScroll
-              ? bigScroll
-                ? styles.pillowLogoDone
-                : styles.pillowLogoBigText
-              : bigScroll
-              ? styles.pillowLogoBigText
-              : styles.pillowLogoHero
-          }
+          className={heroScroll}
         >
           <g id="Layer_2-2" data-name="Layer 2">
             <path
