@@ -157,6 +157,7 @@ export default function ClassickStudios() {
         </div>
       </div>
       <Image
+        className={styles.bigLockPhotos}
         src="/bigLocks.png"
         height="300"
         width="500"

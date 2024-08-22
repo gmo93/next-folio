@@ -28,12 +28,91 @@
   color: white;
   font-weight: 500;
 }
+/* Mobile Header Component */
+.xCont {
+  position: absolute;
+  width: 60px;
+  height: 35px;
+  top: 35px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 30;
+}
+.xCont span {
+  width: 50px;
+  height: 5px;
+  background-color: white;
+}
+.xTopCross {
+  transform: translate(0px, 15px) rotate(-45deg);
+  transition: transform 0.25s;
+}
+.xTop {
+  transition: transform 0.25;
+}
+.xMiddle {
+  transform: translate(0px, 0px) rotate(0deg);
+  transition: transform 0.25;
+}
+.xMiddleCross {
+  transform: translate(0px, -15px) rotate(45deg);
+  transition: transform 0.25s;
+}
+.xBottomCross {
+  display: none;
+}
+.menuSliderClosed {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background-color: #d65858;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/alarmBack.jpg") center / cover no-repeat;
+  z-index: 25;
+  overflow: hidden;
+  transform: translateY(0%);
+  transition: transform 0.75s;
+}
+.menuSliderOpen {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background-color: #d65858;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: url("/alarmClock.gif") center / cover no-repeat;
+  z-index: 25;
+  overflow: hidden;
+  transform: translateY(100%);
+  transition: transform 0.75s;
+}
+.menuSliderOpen ul li {
+  list-style-type: none;
+  font-weight: 600;
+  font-size: 40px;
+}
 /* Hero Component */
 .heroSect {
   width: 100vw;
   height: calc(100vh - 100px);
   display: flex;
   align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .heroSect * {
   color: white;
@@ -591,6 +670,9 @@
   align-items: center;
   background-color: white;
 }
+.bigLockPhotos {
+  padding: 0 25px;
+}
 .lockedVid {
   height: 80vh;
 }
@@ -922,6 +1004,7 @@
     height: 0%;
   }
   .heroLogoSide svg {
+    width: 80%;
     height: 100%;
     position: absolute;
     bottom: 20%;
@@ -950,6 +1033,7 @@
     margin: 0 auto;
     height: auto;
     padding-bottom: 100px;
+    font-weight: 600;
   }
   .exploreStat {
     width: 90vw;
@@ -989,5 +1073,21 @@
   }
   .comforter {
     display: none;
+  }
+
+  /* Classick Studios Mobile Section*/
+  .projHero {
+    height: auto;
+  }
+  .projHero h1 {
+    font-size: 30px;
+  }
+  .indTaskCont {
+    padding: 20px;
+    height: auto;
+  }
+  .projHero p {
+    font-size: 16px;
+    padding-bottom: 0;
   }
 }
