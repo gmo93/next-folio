@@ -31,7 +31,7 @@ export default function ExploreWork() {
   ];
 
   return (
-    <section className={styles.exploreWorkCont}>
+    <section id="projects" className={styles.exploreWorkCont}>
       <div className={styles.exploreScrollCont}>
         <div className={styles.exploreTextCont}>
           Explore a list of website owners who have gotten their doctor
