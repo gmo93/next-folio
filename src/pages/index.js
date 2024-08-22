@@ -38,7 +38,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <Hero />
-        <InView onChange={setInView} threshold={0.8}>
+        <InView onChange={setInView} threshold={0.65}>
           <BigText tuckedIn={tuckedIn} />
         </InView>
         <ExploreWork />

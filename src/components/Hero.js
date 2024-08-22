@@ -3,14 +3,29 @@ export default function Hero({ heroScroll, bigScroll }) {
   return (
     <section className={styles.heroSect}>
       <div className={styles.heroTextCont}>
-        <p className={styles.heroMission}>
-          <strong>The Mission:</strong> Help you and your team get a good
-          night&apos;s rest. <strong>How?</strong> Code. Create. Care. Listen.
-          Adjust. Learn. Support.
-        </p>
         <h1>
           Front End Dev<br></br> JS / HTML / CSS / React / Next.JS
         </h1>
+        <p className={styles.heroMission}>
+          <span
+            style={{
+              color: "#d65858",
+              fontWeight: "600",
+            }}
+          >
+            The Mission:{" "}
+          </span>
+          Help you and your team get a good night&apos;s rest.{" "}
+          <span
+            style={{
+              color: "#d65858",
+              fontWeight: "600",
+            }}
+          >
+            How?
+          </span>{" "}
+          Code. Create. Care. Listen. Adjust. Learn. Support.
+        </p>
       </div>
       <div className={styles.heroLogoSide}>
         <svg

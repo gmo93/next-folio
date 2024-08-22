@@ -41,7 +41,6 @@
 .heroSect h1 {
   font-size: 150px;
   line-height: 1;
-  text-transform: uppercase;
 }
 .heroTextCont {
   width: 50vw;
@@ -96,7 +95,7 @@
   opacity: 0;
 }
 .pillowOne {
-  fill: #161616;
+  fill: #d65858;
 }
 .pillowOne,
 .pillowTwo {
@@ -133,7 +132,6 @@
   width: 65%;
   line-height: 1;
   text-align: center;
-  text-transform: uppercase;
 }
 .bigTextPillow {
   position: absolute;
@@ -147,10 +145,9 @@
 .comfortTwo {
   stroke: #000;
   stroke-miterlimit: 10;
-  fill: #161616;
+  fill: #d65858;
   transition: transform 3s;
 }
-
 .comfortTwoHidden {
   opacity: 0;
 }
@@ -210,7 +207,6 @@
   font-size: 100px;
   line-height: 1;
   font-weight: 800;
-  text-transform: uppercase;
   z-index: 5;
   position: relative;
 }
@@ -239,7 +235,6 @@
   height: 200px;
   border-bottom: 1px solid white;
   font-size: 50px;
-  text-transform: uppercase;
   display: flex;
   background-color: black;
 }
@@ -259,7 +254,6 @@
 }
 .exploreList ul li {
   font-size: 50px;
-  text-transform: uppercase;
   font-weight: 600;
   list-style-type: none;
   padding: 30px 0;
@@ -355,7 +349,6 @@
 .exploreBottomCont h4 {
   color: white;
   font-size: 50px;
-  text-transform: uppercase;
 }
 .bigVid {
   width: 100vw;
@@ -740,7 +733,6 @@
   color: var(--yellow-color);
   font-size: 125px;
   line-height: 1;
-  text-transform: uppercase;
 }
 .rollLoadHead {
   height: 50%;
@@ -800,14 +792,12 @@
   font-size: 50px;
   font-weight: 600;
   line-height: 1;
-  text-transform: uppercase;
 }
 .otherServLeft h2 {
   color: rgb(0, 0, 0);
   font-size: 125px;
   font-weight: 800;
   line-height: 1;
-  text-transform: uppercase;
 }
 .otherServRight {
   width: 40vw;
@@ -896,7 +886,7 @@
     width: 650px;
   }
   .exploreTextCont {
-    font-size: 60px;
+    font-size: 55px;
   }
   .exploreTopCont {
     height: 100px;
@@ -913,5 +903,91 @@
   /* Big Text Laptop Page Sect */
   .bigTextCont h2 {
     font-size: 120px;
+  }
+}
+
+/* Mobile Sizing Section */
+@media only screen and (max-width: 769px) {
+  .heroSect {
+    flex-direction: column-reverse;
+  }
+  .heroSect h1 {
+    font-size: 50px;
+  }
+  .heroTextCont {
+    width: 100vw;
+    height: 60%;
+  }
+  .heroLogoSide {
+    height: 0%;
+  }
+  .heroLogoSide svg {
+    height: 100%;
+    position: absolute;
+    bottom: 20%;
+    z-index: 1;
+    left: 10%;
+  }
+  .heroMission {
+    width: 95%;
+  }
+  .bigTextCont {
+    height: 75vh;
+  }
+  .bigTextCont h2 {
+    font-size: 50px;
+  }
+  .exploreScrollCont {
+    width: 95vw;
+    margin: 0 auto;
+  }
+  .exploreWorkCont {
+    flex-direction: column;
+  }
+  .exploreTextCont {
+    font-size: 32px;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    padding-bottom: 100px;
+  }
+  .exploreStat {
+    width: 90vw;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .exploreStatContRelative {
+    height: 85%;
+  }
+  .exploreList {
+    padding-bottom: 100px;
+  }
+  .exploreList ul li {
+    font-size: 28px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+  .exploreTopCont {
+    font-size: 30px;
+    height: 100px;
+  }
+  .exploreMiddleCont {
+    height: 400px;
+  }
+  .exploreBottomCont h4 {
+    font-size: 30px;
+    height: 150px;
+  }
+  .zzzGif {
+    top: 20%;
+    height: 15%;
+  }
+  .heroMission {
+    font-weight: 500;
+  }
+  .comforter {
+    display: none;
   }
 }

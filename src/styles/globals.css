@@ -114,6 +114,12 @@ header {
   top: 0;
   background: transparent;
 }
+header p {
+  font-size: 16px;
+}
+header a {
+  font-size: 16px;
+}
 nav a {
   padding: 0 10px;
 }
