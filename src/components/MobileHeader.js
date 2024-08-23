@@ -7,18 +7,25 @@ export default function MobileHeader() {
   const [overflow, setOverflow] = useState(false);
   function xClick() {
     setMenuOpen(!menuOpen);
-    console.log(menuOpen);
     setOverflow(!overflow);
-    if (!overflow) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "auto";
+    console.log("menuOpen: " + menuOpen);
   }
   function closeMenu() {
-    menuOpen ? setMenuOpen(false) : "";
-    setOverflow(!overflow);
+    setMenuOpen(false);
+    setOverflow(false);
+    console.log(menuOpen);
   }
 
   useEffect(() => {
+    document
+      .getElementById("projects-btn")
+      .addEventListener("click", closeMenu);
+    document.getElementById("home-btn").addEventListener("click", closeMenu);
+    document.getElementById("contact-btn").addEventListener("click", closeMenu);
     setOverflow(!overflow);
+
+    if (overflow) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
   }, [menuOpen]);
 
   return (
@@ -37,13 +44,13 @@ export default function MobileHeader() {
       >
         <ul>
           <Link href="/">
-            <li>Home</li>
+            <li id="home-btn">Home</li>
           </Link>
-          <Link onClick={closeMenu} href="/#projects">
-            <li>Projects</li>
+          <Link href="/#projects">
+            <li id="projects-btn">Projects</li>
           </Link>
-          <Link onClick={closeMenu} href="/#contact">
-            <li>Contact</li>
+          <Link href="/#contact">
+            <li id="contact-btn">Contact</li>
           </Link>
         </ul>
       </div>

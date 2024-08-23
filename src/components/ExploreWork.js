@@ -47,8 +47,10 @@ export default function ExploreWork() {
               data-photo="/gtbDumbo.jpg"
               data-projtitle="Good Time Brewing"
             >
-              <h4>Good Time Brewing</h4>
-              <p>01</p>
+              <Link href="/goodtimebrewing">
+                <h4>Good Time Brewing</h4>
+                <p>01</p>
+              </Link>
             </li>
             <li
               onMouseEnter={setPhoto}
