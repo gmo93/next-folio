@@ -992,10 +992,14 @@
   width: 100vw;
   min-height: 100vh;
 }
+.gtbLogo {
+  margin: 25px 0;
+}
 .gtbSect p {
   font-size: 28px;
   padding: 20px;
   font-weight: 600;
+  color: white;
 }
 .gtbAboutSect {
   position: relative;
@@ -1018,42 +1022,93 @@
 }
 .gtbExpl h1 {
   color: white;
-  font-size: 80px !important;
+  font-size: 60px !important;
+  line-height: 0.9;
+  text-align: center;
 }
 .gtbExpl h2 {
-  color: #f22f43;
-  padding: 10px 0 20px;
+  color: #fff;
+  padding: 30px 0;
   font-size: 32px;
   line-height: 1;
+  text-align: center;
+  font-weight: 500;
 }
 .gtbExpl h3 {
   font-weight: 500;
+  text-align: center;
+  font-size: 32px;
+  color: #d0b633;
+}
+.gtbSect p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.1;
 }
 .gtbFirst {
   width: 100vw;
-  background-color: #f22f43;
+  background-color: #2a502c;
 }
 .gtbFirst h2 {
   padding: 20px;
 }
 .gtbFirstPhoto {
   background: url("/gtbFirst.jpg") center / cover no-repeat;
-  height: 736px;
-  width: 100vw;
+  height: 600px;
+  width: 80vw;
+  margin: 0 auto;
 }
 .gtbPopUp {
   width: 100vw;
-  background-color: #f22f43;
+  background-color: #2a502c;
+}
+.gtbPopUp p {
+  color: white;
 }
 .gtbPopUpPhoto {
   background: url("/gtbSecond.jpg") center / cover no-repeat;
-  height: 736px;
-  width: 100vw;
+  height: 600px;
+  width: 80vw;
+  margin: 0 auto;
 }
 .gtbTabPhoto {
-  height: 736px;
-  width: 100vw;
+  height: 600px;
+  width: 80vw;
+  margin: 0 auto;
   background: url("/gtbTab.jpg") center / cover no-repeat;
+}
+.gtbFindUsCont {
+  width: 100vw;
+  background-color: #2a502c;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gtbFindVid {
+  width: 80vw;
+  height: 600px;
+  margin: 0 auto;
+}
+.gtbReviewCont {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #2a502c;
+}
+.gtbTimelineVid {
+  width: 80vw;
+  height: 600px;
+}
+.gtbReviewCont {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gtbReviewVid {
+  width: 80vw;
+  height: 600px;
 }
 /* Laptop Sizing Section */
 @media only screen and (min-width: 1400px) and (max-width: 1800px) {
@@ -1197,7 +1252,6 @@
   }
   /* Good Time Brewing Mobile Section */
   .gtbSect {
-    height: 50vh;
     width: 100vw;
   }
 }

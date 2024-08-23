@@ -1,16 +1,30 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "../styles/Home.module.css";
 
 export default function GoodTimeBrewing() {
   const [mobile, setMobile] = useState(false);
 
+  const ref = useRef(null);
+  const handlePlayVideo = (e) => {
+    e.currentTarget.play();
+  };
+  const handlePauseVideo = (e) => {
+    e.currentTarget.pause();
+  };
+
   return (
     <section className={styles.gtbSect}>
       <div className={styles.gtbAboutSect}></div>
       <div className={styles.gtbExpl}>
-        <h1>Good Time Brewing</h1>
+        <img
+          className={styles.gtbLogo}
+          src="https://cdn.shopify.com/s/files/1/0737/3232/5665/files/logo-small.webp?v=1709357195"
+          height={73}
+          width={150}
+          alt="Good Time Brewing Logo"
+        />
         <h2>Task: Build a custom website using Shopify. </h2>
-        <h3>Built using HTML, CSS, Vanilla JS, and Liquid</h3>
+        <h3>Built using: HTML, CSS, Vanilla JS, and Liquid</h3>
       </div>
       <div className={styles.gtbFirst}>
         <p>
@@ -28,6 +42,55 @@ export default function GoodTimeBrewing() {
         </p>
         <div className={styles.gtbPopUpPhoto}></div>
         <div className={styles.gtbTabPhoto}></div>
+      </div>
+      <div className={styles.gtbFindUsCont}>
+        <p>
+          This next section is the &quot;Find Us&quot; section of the page,
+          where users can find stores selling Good Time Brewing near them. I
+          initially built this using the Google Map API, but as the company
+          continued to grow, I decided to use the &apos;Storepoint&apos; app
+          instead. It allowed for easier maintenace by myself and the team, as
+          well as features that would&apos;ve been more costly to build from
+          scratch.
+        </p>
+        <video
+          className={styles.gtbFindVid}
+          src="/gtbFindUs.mov"
+          onClick={handlePlayVideo}
+          playsInline
+          muted={true}
+        ></video>
+      </div>
+      <div className={styles.gtbReviewCont}>
+        <p>
+          For the mobile &apos;About&apos; section of the site, my client
+          requested a swipable timeline that allowed the user to go through and
+          see every stage of Good Time&apos;s beginning. I suggested a visual
+          that showed when the timeline had reached the end, or was back at the
+          beginning, and implemnted that using vanilla javascript! Below is a
+          video of how that turned out!{" "}
+        </p>
+        <video
+          onClick={handlePlayVideo}
+          playsInline
+          muted={true}
+          className={styles.gtbTimelineVid}
+          src="/gtbTimeline.mov"
+        ></video>
+      </div>
+      <div className={styles.gtbReviewCont}>
+        <p>
+          The final thing I wanted to highlight on this site was the mobile
+          review carousel I made. I used vanilla javascript to transform the div
+          by the width of each review to give it a sliding effect.
+        </p>
+        <video
+          className={styles.gtbReviewVid}
+          onClick={handlePlayVideo}
+          playsInline
+          muted={true}
+          src="/gtbReview.mov"
+        ></video>
       </div>
     </section>
   );
