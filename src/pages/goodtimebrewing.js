@@ -54,7 +54,7 @@ export default function GoodTimeBrewing() {
           scratch.
         </p>
         <video
-          poster="/gtbFind.jpg"
+          poster="/gtbFindThumb.jpg"
           className={styles.gtbFindVid}
           src="/gtbFind.mov"
           onClick={handlePlayVideo}
@@ -72,7 +72,7 @@ export default function GoodTimeBrewing() {
           video of how that turned out!{" "}
         </p>
         <video
-          poster="/gtbTimelineThumb.jpg"
+          poster="/gtbTLThumb.jpg"
           onClick={handlePlayVideo}
           playsInline
           muted={true}
@@ -87,7 +87,7 @@ export default function GoodTimeBrewing() {
           by the width of each review to give it a sliding effect.
         </p>
         <video
-          poster="/gtbReviewsThumb.jpg"
+          poster="/gtbRevThumb.jpg"
           className={styles.gtbReviewVid}
           onClick={handlePlayVideo}
           playsInline

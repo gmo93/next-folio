@@ -48,26 +48,26 @@
 }
 .xTopCross {
   transform: translate(0px, 15px) rotate(-45deg);
-  transition: transform 0.5s;
+  transition: transform 0.75s;
 }
 .xTop {
   transform: translate(0) rotate(0deg);
-  transition: transform 0.5;
+  transition: transform 0.75;
 }
 .xMiddle {
   transform: translate(0px, 0px) rotate(0deg);
-  transition: transform 0.5s;
+  transition: transform 0.75s;
 }
 .xMiddleCross {
   display: none;
 }
 .xBottom {
   transform: translate(0px, 0px) rotate(0deg);
-  transition: transform 0.5;
+  transition: transform 0.75s;
 }
 .xBottomCross {
   transform: translate(0px, -15px) rotate(45deg);
-  transition: transform 0.5s;
+  transition: transform 0.75s;
 }
 .menuSliderClosed {
   height: 100vh;
