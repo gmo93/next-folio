@@ -77,6 +77,17 @@ export default function ClassickStudios() {
           width={268}
           height={151}
         ></Image>
+        <p>
+          About a day into the tee dropping, I got a call and was told that some
+          customers weren&apos;t able to checkout, so I got to digging. I went
+          to Squarespace, and saw that Stripe was declining some payments, but
+          it didn&apos;t say why. So I then went to Stripe, and through their
+          dashboard was able to see the issues were with people&apos;s apple pay
+          zips not matching the zip on their cards. With this info, I collected
+          the emails of those users and sent out a mass email to let them know
+          exactly why their payment was declined. This email resulted in about
+          an 80% conversion rate on those payments that were initially declined.
+        </p>
       </section>
     </div>
   );

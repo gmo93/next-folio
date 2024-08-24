@@ -991,16 +991,17 @@
   background: url("/sleepyEyes.gif") center / contain no-repeat;
 }
 /* Good Time Brewing Section */
-.projCont {
+.projSect {
   position: relative;
   margin-top: -100px;
   width: 100vw;
   min-height: 100vh;
 }
-.projCont p {
-  font-size: 28px;
+.projSect div p {
+  font-size: 18px;
   padding: 20px;
-  font-weight: 600;
+  font-weight: 300;
+  line-height: 1;
   color: white;
 }
 .gtbSect {
