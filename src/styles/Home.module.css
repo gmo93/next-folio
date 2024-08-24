@@ -29,6 +29,12 @@
   font-weight: 500;
 }
 /* Mobile Header Component */
+.mobileHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
 .xCont {
   position: fixed;
   width: 60px;
@@ -1018,7 +1024,6 @@
   justify-content: center;
   color: white;
   padding: 20px;
-  background-color: #2a502c;
 }
 .gtbExpl h1 {
   color: white;
@@ -1229,11 +1234,56 @@
   }
 
   /* Classick Studios Mobile Section*/
+  .classCont p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.1;
+    color: white;
+    padding: 20px 0;
+    width: 80vw;
+  }
+  .classExpl {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+  }
+  .classExpl h1 {
+    color: white;
+    font-size: 40px !important;
+    line-height: 1;
+    padding: 20px 0 10px;
+    text-align: center;
+  }
+  .classExpl h2 {
+    color: #fff;
+    padding: 30px 0;
+    font-size: 32px;
+    line-height: 1;
+    text-align: center;
+    font-weight: 500;
+  }
+  .classExpl p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.1;
+    padding-bottom: 20px;
+  }
+  .projBack {
+    height: 50vh;
+    width: 100vw;
+    background: url("/lockedInTee.jpg") center / cover no-repeat;
+  }
   .projHero {
     height: auto;
   }
   .projHero h1 {
-    font-size: 30px;
+    font-size: 40px;
+    text-align: left;
+    padding: 20px 0;
   }
   .indTaskCont {
     padding: 20px;
@@ -1249,6 +1299,31 @@
   }
   .sleepyEyesCont {
     height: 300px;
+  }
+  .lockedVid {
+    width: 100vw;
+    height: auto;
+  }
+  .indTaskCont p {
+    color: white;
+  }
+  .classExplPhoto {
+    height: 600px;
+    width: 80vw;
+    background: url("/lockedInRef.jpg") center / cover no-repeat;
+  }
+  .classDemo {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+  }
+  .classDemoVid {
+    width: 80vw;
+    height: 600px;
   }
   /* Good Time Brewing Mobile Section */
   .gtbSect {

@@ -29,7 +29,7 @@ export default function MobileHeader() {
   }, [menuOpen]);
 
   return (
-    <header>
+    <header className={styles.mobileHeader}>
       <div onClick={xClick} className={styles.xCont}>
         <span className={menuOpen ? styles.xTopCross : styles.xTop}></span>
         <span

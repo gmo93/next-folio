@@ -4,12 +4,8 @@ import styles from "../styles/Home.module.css";
 export default function GoodTimeBrewing() {
   const [mobile, setMobile] = useState(false);
 
-  const ref = useRef(null);
   const handlePlayVideo = (e) => {
     e.currentTarget.play();
-  };
-  const handlePauseVideo = (e) => {
-    e.currentTarget.pause();
   };
 
   return (

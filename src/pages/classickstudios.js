@@ -9,31 +9,12 @@ export default function ClassickStudios() {
   const [slideCount, setSlideCount] = useState(0);
   const header = "Classick Studios";
 
-  const activeDot = {
-    width: "90px",
-    height: "10px",
-    border: "1px solid white",
-    margin: "15px",
-    cursor: "pointer",
-  };
-  const inactiveDot = {
-    width: "90px",
-    height: "10px",
-    border: "1px solid white",
-    margin: "15px",
-    cursor: "pointer",
-    position: "relative",
-  };
-
   let direction = false;
 
-  function handleClick(e) {
-    setTrans(e.target.getAttribute("data-transform"));
-    setSlideCount((number) => {
-      setPrevSlide(slideCount);
-      return Number(e.target.getAttribute("data-slide"));
-    });
-  }
+  const ref = useRef(null);
+  const handlePlayVideo = (e) => {
+    e.currentTarget.play();
+  };
 
   useEffect(() => {
     let typer = setTimeout(() => {
@@ -46,136 +27,49 @@ export default function ClassickStudios() {
   }, [count]);
 
   return (
-    <div id="classick" className={styles.projCont}>
-      <div
-        className={styles.projBack}
-        style={{
-          background: 'url("/lockedInTee.jpg") center / contain repeat',
-        }}
-      ></div>
-      <div
-        className={styles.projHero}
-        style={{
-          background: 'url("/smallLocks.jpg") center / 101% no-repeat',
-        }}
-      >
+    <div id="classick" className={styles.classCont}>
+      <section className={styles.projBack}></section>
+      <section className={styles.classExpl}>
         <h1>
           {headTitle ? headTitle : ""}
           <span className={styles.underScore}>_</span>
         </h1>
-        <div className={styles.taskCont}>
-          <div
-            className={styles.horTaskCont}
-            style={{ transform: `${trans}`, transition: "transform 1s" }}
-          >
-            <div className={styles.indTaskCont}>
-              <p>
-                <span style={{ fontWeight: "600" }}>
-                  {" "}
-                  Task At Hand:<br></br>
-                </span>{" "}
-                Create a project page for a t-shirt drop through an existing
-                Squarespace site.
-              </p>
-            </div>
-            <div className={styles.indTaskCont}>
-              <p>
-                <span style={{ fontWeight: "600" }}>
-                  The Challenge:<br></br>
-                </span>{" "}
-                Not just have the standard sizing dropdown menu. Instead, they
-                wanted the sizing options to be different &quot;locks&quot;, and
-                as each size sold out, the lock would represent that.
-              </p>
-            </div>
-            <div className={styles.indTaskCont}>
-              <p>
-                <span style={{ fontWeight: "600" }}>
-                  How the Challenge Was Navigated:<br></br>
-                </span>{" "}
-                As I was going through and building out this functionality, I
-                realized Squarespace had a hidden element that was the option
-                for clickable sizes, as opposed to the standard dropdown. From
-                there, I used the data attributes provided by Squarespace, the
-                &quot;quantity in stock&quot; in particular, to make the lock
-                partially transparent, and no longer clickable when that size
-                had sold out. Most of this build just required some vanilla js.
-              </p>
-            </div>
-          </div>
+        <div className={styles.classExpl}>
+          <h2>
+            Task: Using Squarespace, build a custom sizing selection feature.
+          </h2>
+          <p>
+            This first image is the reference that was sent to me when I was
+            contacted about this project. This client wanted to add some flavor
+            to their product page, so instead of Squarespace&apos;s standard
+            dropdown sizing option, they wanted locks to represent each size,
+            which is shown below in the mock.
+          </p>
+          <div className={styles.classExplPhoto}></div>
         </div>
-        <div className={styles.dotCont}>
-          <span
-            data-transform="translateX(100vw)"
-            data-slide="0"
-            onClick={handleClick}
-            style={inactiveDot}
-            id="dotOne"
-          >
-            <span
-              className={
-                slideCount === 0 ? styles.dotFilled : styles.dotNotFilled
-              }
-              style={{
-                right: "0",
-              }}
-            ></span>
-          </span>
-          <span
-            data-slide="1"
-            data-transform="translateX(0vw)"
-            onClick={handleClick}
-            style={inactiveDot}
-            id="dotTwo"
-          >
-            <span
-              className={
-                slideCount === 1 ? styles.dotFilled : styles.dotNotFilled
-              }
-              style={
-                (prevSlide === 0 && slideCount === 1) ||
-                (prevSlide === 1 && slideCount === 0)
-                  ? { left: "0" }
-                  : { right: "0" }
-              }
-            ></span>
-          </span>
-          <span
-            data-slide="2"
-            data-transform="translateX(-100vw)"
-            onClick={handleClick}
-            style={inactiveDot}
-            id="dotThree"
-          >
-            <span
-              className={
-                slideCount === 2 ? styles.dotFilled : styles.dotNotFilled
-              }
-              style={{ left: "0" }}
-            ></span>
-          </span>
-        </div>
-      </div>
-      <Image
-        className={styles.bigLockPhotos}
-        src="/bigLocks.png"
-        height="300"
-        width="500"
-        style={{
-          objectFit: "contain",
-          margin: "0 auto",
-        }}
-        alt="First half of the T-Shirt Mockup for a checkout feature on the Classick Studios website."
-      ></Image>
-      <div className={styles.lockedVidCont}>
+      </section>
+      <section className={styles.classDemo}>
+        <p>
+          This next section shows the page in action! Each lock acts as a size
+          selector. To do this, I originally was building it from scratch using
+          data-attributes that Squarespace already has in place. But as I was
+          poking around, I found out they have a hidden sizing selection section
+          that can be used in place of their standard size dropdown.
+        </p>
+        <p>
+          Once I got the buttons working, the final task was to have the buttons
+          interact with Squarespace&apos;s DB, and deactivate any size button
+          that was out of stock. To do that, I just used vanilla js to pull
+          data-attributes already provided by Squarespace, and applied them to
+          the associated lock.
+        </p>
         <video
-          playsInline
-          autoPlay
-          muted
-          src="/lockedInVid.mov"
-          className={styles.lockedVid}
+          onClick={handlePlayVideo}
+          poster="/lockedInDemoThumb.jpg"
+          className={styles.classDemoVid}
+          src="lockedInDemo.mov"
         ></video>
-      </div>
+      </section>
     </div>
   );
 }
