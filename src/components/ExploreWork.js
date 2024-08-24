@@ -69,8 +69,10 @@ export default function ExploreWork() {
               data-photo="/shopDakotaRidge.webp"
               data-projtitle="Dakota Ridge"
             >
-              <h4>Dakota Ridge</h4>
-              <p>03</p>
+              <Link href="/dakotaridge">
+                <h4>Dakota Ridge</h4>
+                <p>03</p>
+              </Link>
             </li>
             <li
               onMouseEnter={setPhoto}

@@ -991,23 +991,28 @@
   background: url("/sleepyEyes.gif") center / contain no-repeat;
 }
 /* Good Time Brewing Section */
-.gtbSect {
-  background-color: #2a502c;
+.projCont {
   position: relative;
   margin-top: -100px;
   width: 100vw;
   min-height: 100vh;
 }
-.gtbLogo {
-  margin: 25px 0;
-}
-.gtbSect p {
+.projCont p {
   font-size: 28px;
   padding: 20px;
   font-weight: 600;
   color: white;
 }
-.gtbAboutSect {
+.gtbSect {
+  background-color: #2a502c;
+}
+.gtbSect p {
+  color: white;
+}
+.gtbLogo {
+  margin: 25px 0;
+}
+.gtbPhoto {
   position: relative;
   width: 100vw;
   height: 50vh;
@@ -1016,7 +1021,7 @@
   background: url("https://cdn.shopify.com/s/files/1/0737/3232/5665/files/gtb-ipa-beside-beer-glass-on-table_.5.jpg?v=1718209812")
     center / cover no-repeat;
 }
-.gtbExpl {
+.projExpl {
   height: auto;
   width: 100vw;
   display: flex;
@@ -1025,19 +1030,34 @@
   color: white;
   padding: 20px;
 }
-.gtbExpl h1 {
-  color: white;
-  font-size: 60px !important;
-  line-height: 0.9;
+.projExpl h1 {
+  font-size: 40px !important;
+  line-height: 1;
+  padding: 20px 0 10px;
   text-align: center;
 }
-.gtbExpl h2 {
-  color: #fff;
+.projExpl h2 {
   padding: 30px 0;
   font-size: 32px;
   line-height: 1;
   text-align: center;
   font-weight: 500;
+}
+.projPhoto {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  align-items: flex-start;
+}
+.gtbExpl {
+  background-color: #2a502c;
+}
+.gtbExpl h1 {
+  color: white;
+}
+.gtbExpl h2 {
+  color: #fff;
 }
 .gtbExpl h3 {
   font-weight: 500;
@@ -1045,10 +1065,16 @@
   font-size: 32px;
   color: #d0b633;
 }
-.gtbSect p {
+.projCont p {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.1;
+}
+.projFirst {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .gtbFirst {
   width: 100vw;
@@ -1089,7 +1115,7 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.gtbFindVid {
+.projDemoVid {
   width: 80vw;
   height: 600px;
   margin: 0 auto;
@@ -1152,10 +1178,12 @@
   }
   .heroSect h1 {
     font-size: 50px;
+    padding-bottom: 10px;
   }
   .heroTextCont {
     width: 100vw;
     height: 60%;
+    justify-content: flex-end;
   }
   .heroLogoSide {
     height: 0%;
@@ -1253,10 +1281,6 @@
   }
   .classExpl h1 {
     color: white;
-    font-size: 40px !important;
-    line-height: 1;
-    padding: 20px 0 10px;
-    text-align: center;
   }
   .classExpl h2 {
     color: #fff;
@@ -1326,7 +1350,22 @@
     height: 600px;
   }
   /* Good Time Brewing Mobile Section */
-  .gtbSect {
+
+  /* Dakota Ridge Mobile Section */
+  .dkrSect {
     width: 100vw;
+    background-color: #e6e6e6;
+    min-height: 100vh;
+  }
+  .dkrSect * {
+    color: black;
+  }
+  .dkrSect p {
+    color: black;
+  }
+  .dkrHeaderImg {
+    width: 100vw;
+    height: 50vh;
+    background: url("/shopDakotaRidge.webp") center / cover no-repeat;
   }
 }

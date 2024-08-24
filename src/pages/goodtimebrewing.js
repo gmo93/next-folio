@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 export default function GoodTimeBrewing() {
@@ -9,9 +10,9 @@ export default function GoodTimeBrewing() {
   };
 
   return (
-    <section className={styles.gtbSect}>
-      <div className={styles.gtbAboutSect}></div>
-      <div className={styles.gtbExpl}>
+    <section className={`${styles.projSect} ${styles.gtbSect}`}>
+      <div className={`${styles.projPhoto} ${styles.gtbPhoto}`}></div>
+      <div className={`${styles.projExpl} ${styles.gtbExpl}`}>
         <img
           className={styles.gtbLogo}
           src="https://cdn.shopify.com/s/files/1/0737/3232/5665/files/logo-small.webp?v=1709357195"
@@ -22,7 +23,7 @@ export default function GoodTimeBrewing() {
         <h2>Task: Build a custom website using Shopify. </h2>
         <h3>Built using: HTML, CSS, Vanilla JS, and Liquid</h3>
       </div>
-      <div className={styles.gtbFirst}>
+      <div className={`${styles.projFirst} ${styles.gtbFirst}`}>
         <p>
           This first section is the mobile homepage of the Good Time Brewing
           site.
@@ -51,11 +52,9 @@ export default function GoodTimeBrewing() {
         </p>
         <video
           poster="/gtbFindThumb.jpg"
-          className={styles.gtbFindVid}
+          className={styles.projDemoVid}
           src="/gtbFind.mov"
           onClick={handlePlayVideo}
-          playsInline
-          muted={true}
         ></video>
       </div>
       <div className={styles.gtbReviewCont}>
@@ -70,9 +69,7 @@ export default function GoodTimeBrewing() {
         <video
           poster="/gtbTLThumb.jpg"
           onClick={handlePlayVideo}
-          playsInline
-          muted={true}
-          className={styles.gtbTimelineVid}
+          className={styles.projDemoVid}
           src="/gtbTimeline.mov"
         ></video>
       </div>
@@ -84,10 +81,8 @@ export default function GoodTimeBrewing() {
         </p>
         <video
           poster="/gtbRevThumb.jpg"
-          className={styles.gtbReviewVid}
+          className={styles.projDemoVid}
           onClick={handlePlayVideo}
-          playsInline
-          muted={true}
           src="/gtbReview.mov"
         ></video>
       </div>

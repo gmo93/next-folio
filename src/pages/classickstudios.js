@@ -27,9 +27,9 @@ export default function ClassickStudios() {
   }, [count]);
 
   return (
-    <div id="classick" className={styles.classCont}>
+    <div id="classick" className={`${styles.projCont} ${styles.classCont}`}>
       <section className={styles.projBack}></section>
-      <section className={styles.classExpl}>
+      <section className={`${styles.projExpl} ${styles.classExpl}`}>
         <h1>
           {headTitle ? headTitle : ""}
           <span className={styles.underScore}>_</span>
@@ -66,9 +66,17 @@ export default function ClassickStudios() {
         <video
           onClick={handlePlayVideo}
           poster="/lockedInDemoThumb.jpg"
-          className={styles.classDemoVid}
+          className={styles.projDemoVid}
           src="lockedInDemo.mov"
         ></video>
+      </section>
+      <section className={styles.stripeSect}>
+        <Image
+          src="/stripeLogo.png"
+          alt="Stripe logo"
+          width={268}
+          height={151}
+        ></Image>
       </section>
     </div>
   );
