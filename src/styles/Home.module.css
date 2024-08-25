@@ -1174,6 +1174,9 @@
 
 /* Mobile Sizing Section */
 @media only screen and (max-width: 769px) {
+  .projPhoto {
+    height: 500px;
+  }
   .heroSect {
     flex-direction: column-reverse;
     height: 92vh;
