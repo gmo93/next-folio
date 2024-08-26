@@ -991,23 +991,23 @@
   background: url("/sleepyEyes.gif") center / contain no-repeat;
 }
 /* Good Time Brewing Section */
-.projSect {
+.projCont {
   position: relative;
   margin-top: -100px;
   width: 100vw;
   min-height: 100vh;
 }
-.projSect div p {
+.projCont div p {
   font-size: 18px;
   padding: 20px;
   font-weight: 300;
   line-height: 1;
   color: white;
 }
-.gtbSect {
+.gtbCont {
   background-color: #2a502c;
 }
-.gtbSect p {
+.gtbCont p {
   color: white;
 }
 .gtbLogo {
@@ -1066,10 +1066,14 @@
   font-size: 32px;
   color: #d0b633;
 }
-.projCont p {
+.projCont section p {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.1;
+  padding: 20px 40px;
+}
+.dkrCont section p {
+  color: white;
 }
 .projFirst {
   display: flex;
@@ -1141,6 +1145,39 @@
 .gtbReviewVid {
   width: 80vw;
   height: 600px;
+}
+/* Studio Super Section */
+.studioPhoto {
+  background-color: rgb(0, 0, 0);
+  height: 500px;
+  width: 100vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 50px;
+}
+.studioOne {
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-miterlimit: 10;
+}
+.studioMarquee {
+  width: 100vw;
+  height: auto;
+  background: url("/studioMarquee.gif") center / cover no-repeat;
+}
+/* Dakota Ridge Section */
+.dkrCont {
+  background-color: #ed5f58;
+}
+.dkrCont h1 {
+  color: black;
+}
+.dkrCont h2 {
+  color: white;
+}
+.dkrCont section p {
+  color: black;
 }
 /* Laptop Sizing Section */
 @media only screen and (min-width: 1400px) and (max-width: 1800px) {
@@ -1368,9 +1405,10 @@
   .dkrSect p {
     color: black;
   }
-  .dkrHeaderImg {
+  .dkrPhoto {
     width: 100vw;
-    height: 50vh;
     background: url("/shopDakotaRidge.webp") center / cover no-repeat;
   }
+
+  /* Studio Super Mobile Section */
 }

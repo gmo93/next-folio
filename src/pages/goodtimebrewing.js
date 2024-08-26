@@ -10,9 +10,9 @@ export default function GoodTimeBrewing() {
   };
 
   return (
-    <section className={`${styles.projSect} ${styles.gtbSect}`}>
+    <div className={`${styles.projCont} ${styles.gtbCont}`}>
       <div className={`${styles.projPhoto} ${styles.gtbPhoto}`}></div>
-      <div className={`${styles.projExpl} ${styles.gtbExpl}`}>
+      <section className={`${styles.projExpl} ${styles.gtbExpl}`}>
         <img
           className={styles.gtbLogo}
           src="https://cdn.shopify.com/s/files/1/0737/3232/5665/files/logo-small.webp?v=1709357195"
@@ -22,15 +22,15 @@ export default function GoodTimeBrewing() {
         />
         <h2>Task: Build a custom website using Shopify. </h2>
         <h3>Built using: HTML, CSS, Vanilla JS, and Liquid</h3>
-      </div>
-      <div className={`${styles.projFirst} ${styles.gtbFirst}`}>
+      </section>
+      <section className={`${styles.projFirst} ${styles.gtbFirst}`}>
         <p>
           This first section is the mobile homepage of the Good Time Brewing
           site.
         </p>
         <div className={styles.gtbFirstPhoto}></div>
-      </div>
-      <div className={styles.gtbPopUp}>
+      </section>
+      <section className={styles.gtbPopUp}>
         <p>
           This second section shows a pop-up the user gets when they first enter
           the screen. If it is X&apos;d out, it generates a fixed tab on the
@@ -39,8 +39,8 @@ export default function GoodTimeBrewing() {
         </p>
         <div className={styles.gtbPopUpPhoto}></div>
         <div className={styles.gtbTabPhoto}></div>
-      </div>
-      <div className={styles.gtbFindUsCont}>
+      </section>
+      <section className={styles.gtbFindUsCont}>
         <p>
           This next section is the &quot;Find Us&quot; section of the page,
           where users can find stores selling Good Time Brewing near them. I
@@ -56,8 +56,8 @@ export default function GoodTimeBrewing() {
           src="/gtbFind.mov"
           onClick={handlePlayVideo}
         ></video>
-      </div>
-      <div className={styles.gtbReviewCont}>
+      </section>
+      <section className={styles.gtbReviewCont}>
         <p>
           For the mobile &apos;About&apos; section of the site, my client
           requested a swipable timeline that allowed the user to go through and
@@ -72,8 +72,8 @@ export default function GoodTimeBrewing() {
           className={styles.projDemoVid}
           src="/gtbTimeline.mov"
         ></video>
-      </div>
-      <div className={styles.gtbReviewCont}>
+      </section>
+      <section className={styles.gtbReviewCont}>
         <p>
           The final thing I wanted to highlight on this site was the mobile
           review carousel I made. I used vanilla javascript to transform the div
@@ -85,7 +85,7 @@ export default function GoodTimeBrewing() {
           onClick={handlePlayVideo}
           src="/gtbReview.mov"
         ></video>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

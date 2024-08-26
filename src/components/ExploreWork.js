@@ -80,8 +80,10 @@ export default function ExploreWork() {
               data-photo="/rope.jpg"
               data-projtitle="Studio Supers"
             >
-              <h4>Studio Supers</h4>
-              <p>04</p>
+              <Link href="/studiosupers">
+                <h4>Studio Supers</h4>
+                <p>04</p>
+              </Link>
             </li>
             <li
               onMouseEnter={setPhoto}
