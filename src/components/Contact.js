@@ -1,37 +1,154 @@
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { useRef } from "react";
+import {
+  Button,
+  Container,
+  FormControl,
+  FormErrorMessage,
+  FormLabel,
+  Heading,
+  Input,
+  StylesProvider,
+  Text,
+  Textarea,
+  useToast,
+} from "@chakra-ui/react";
+import { useState } from "react";
+import { sendContactForm } from "../lib/api";
 
-export default function ContactUs() {
-  const nameInputRef = useRef(null);
-  const emailInputRef = useRef(null);
-  const messageInputRef = useRef(null);
+const initValues = { name: "", email: "", subject: "", message: "" };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const initState = { isLoading: false, error: "", values: initValues };
 
-    const name = nameInputRef.current.value;
-    const email = emailInputRef.current.value;
-    const message = messageInputRef.current.value;
+export default function Home() {
+  const toast = useToast();
+  const [state, setState] = useState(initState);
+  const [touched, setTouched] = useState({});
 
-    console.log(name);
-    console.log(email);
-    console.log(message);
+  const { values, isLoading, error } = state;
 
-    nameInputRef.current.value = "";
-    emailInputRef.current.value = "";
-    messageInputRef.current.value = "";
+  const onBlur = ({ target }) =>
+    setTouched((prev) => ({ ...prev, [target.name]: true }));
+
+  const handleChange = ({ target }) =>
+    setState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [target.name]: target.value,
+      },
+    }));
+
+  const onSubmit = async () => {
+    setState((prev) => ({
+      ...prev,
+      isLoading: true,
+    }));
+    try {
+      await sendContactForm(values);
+      setTouched({});
+      setState(initState);
+      toast({
+        title: "Message sent.",
+        status: "success",
+        duration: 2000,
+        position: "top",
+      });
+    } catch (error) {
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+        error: error.message,
+      }));
+    }
   };
 
   return (
     <section id="contact" className={styles.contactUs}>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Name" ref={nameInputRef}></input>
-        <input type="text" placeholder="Email" ref={emailInputRef}></input>
-        <input type="text" placehodler="Message" ref={messageInputRef}></input>
-        <button type="submit">Submit</button>
-      </form>
-      <h2>Contact Us</h2>
+      <Container maxW="450px" mt={12}>
+        <Heading>Contact</Heading>
+        {error && (
+          <Text color="red.300" my={4} fontSize="xl">
+            {error}
+          </Text>
+        )}
+
+        <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
+          <FormLabel>Name</FormLabel>
+          <Input
+            type="text"
+            name="name"
+            errorBorderColor="red.300"
+            value={values.name}
+            onChange={handleChange}
+            onBlur={onBlur}
+          />
+          <FormErrorMessage>Required</FormErrorMessage>
+        </FormControl>
+
+        <FormControl
+          isRequired
+          isInvalid={touched.email && !values.email}
+          mb={5}
+        >
+          <FormLabel>Email</FormLabel>
+          <Input
+            type="email"
+            name="email"
+            errorBorderColor="red.300"
+            value={values.email}
+            onChange={handleChange}
+            onBlur={onBlur}
+          />
+          <FormErrorMessage>Required</FormErrorMessage>
+        </FormControl>
+
+        <FormControl
+          mb={5}
+          isRequired
+          isInvalid={touched.subject && !values.subject}
+        >
+          <FormLabel>Subject</FormLabel>
+          <Input
+            type="text"
+            name="subject"
+            errorBorderColor="red.300"
+            value={values.subject}
+            onChange={handleChange}
+            onBlur={onBlur}
+          />
+          <FormErrorMessage>Required</FormErrorMessage>
+        </FormControl>
+
+        <FormControl
+          isRequired
+          isInvalid={touched.message && !values.message}
+          mb={5}
+        >
+          <FormLabel>Message</FormLabel>
+          <Textarea
+            type="text"
+            name="message"
+            rows={4}
+            errorBorderColor="red.300"
+            value={values.message}
+            onChange={handleChange}
+            onBlur={onBlur}
+          />
+          <FormErrorMessage>Required</FormErrorMessage>
+        </FormControl>
+
+        <Button
+          variant="outline"
+          colorScheme="blue"
+          isLoading={isLoading}
+          disabled={
+            !values.name || !values.email || !values.subject || !values.message
+          }
+          onClick={onSubmit}
+        >
+          Submit
+        </Button>
+      </Container>
       <div className={styles.sleepyEyesCont}></div>
     </section>
   );
