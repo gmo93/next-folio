@@ -984,6 +984,16 @@
 }
 .contactUs h2 {
   color: black;
+  text-align: center;
+  font-size: 50px;
+  padding-bottom: 25px;
+}
+.formCont {
+  display: flex;
+  flex-direction: column;
+}
+.formCont button {
+  margin-top: 25px;
 }
 .sleepyEyesCont {
   width: 30vw;
@@ -1368,6 +1378,7 @@
   }
   .sleepyEyesCont {
     height: 300px;
+    width: 40vw;
   }
   .lockedVid {
     width: 100vw;

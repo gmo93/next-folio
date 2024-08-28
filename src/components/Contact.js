@@ -64,7 +64,7 @@ export default function Home() {
 
   return (
     <section id="contact" className={styles.contactUs}>
-      <Container maxW="450px" mt={12}>
+      <Container className={styles.formCont} w="60%" maxW="450px" mt={12}>
         <Heading>Contact</Heading>
         {error && (
           <Text color="red.300" my={4} fontSize="xl">
@@ -81,6 +81,11 @@ export default function Home() {
             value={values.name}
             onChange={handleChange}
             onBlur={onBlur}
+            border="0"
+            width="100%"
+            py="5"
+            my="5"
+            borderRadius="10"
           />
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
@@ -98,6 +103,11 @@ export default function Home() {
             value={values.email}
             onChange={handleChange}
             onBlur={onBlur}
+            w="100%"
+            border="0"
+            borderRadius="10"
+            py="5"
+            my="5"
           />
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
@@ -115,6 +125,11 @@ export default function Home() {
             value={values.subject}
             onChange={handleChange}
             onBlur={onBlur}
+            w="100%"
+            border="0"
+            borderRadius="10"
+            py="5"
+            my="5"
           />
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
@@ -133,14 +148,26 @@ export default function Home() {
             value={values.message}
             onChange={handleChange}
             onBlur={onBlur}
+            w="100%"
+            border="0"
+            borderRadius="10"
+            py="5"
+            my="5"
           />
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
 
         <Button
-          variant="outline"
-          colorScheme="blue"
-          isLoading={isLoading}
+          style={{
+            width: "80%",
+            border: "none",
+            backgroundColor: "black",
+            color: "white",
+            padding: "10px 20px",
+            borderRadius: "15px",
+            fontSize: "20px",
+            margin: "0 auto",
+          }}
           disabled={
             !values.name || !values.email || !values.subject || !values.message
           }
