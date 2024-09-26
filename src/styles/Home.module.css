@@ -1100,10 +1100,10 @@
   padding: 20px;
 }
 .gtbFirstPhoto {
-  background: url("/gtbFirst.jpg") center / cover no-repeat;
-  height: 600px;
-  width: 80vw;
-  margin: 0 auto;
+  background: url("/gtbFirstLaptop.jpg") center / contain no-repeat;
+  height: 700px;
+  width: 1100px;
+  margin: 0;
 }
 .gtbPopUp {
   width: 100vw;
@@ -1214,6 +1214,32 @@
   }
   .exploreList ul li {
     font-size: 40px;
+  }
+  .contactUs {
+    justify-content: center;
+  }
+  .sleepyEyesCont {
+    height: 20vh;
+  }
+  /* Good Time Brewing Laptop Sect */
+  .gtbPhoto {
+    background: url("https://cdn.shopify.com/s/files/1/0737/3232/5665/files/three-cans-on-bar-big.webp?v=1709399785")
+      center / contain no-repeat;
+  }
+  .gtbLogo {
+    margin: 0 auto 0 0;
+  }
+  .gtbExpl {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projFirst {
+    flex-wrap: nowrap;
+  }
+  .gtbFirstPhoto {
+    background: url("/gtbFirstLaptop.jpg") center / contain no-repeat;
+    height: 60vh;
+    margin: 0;
   }
   /* Big Text Laptop Page Sect */
   .bigTextCont h2 {
@@ -1406,6 +1432,12 @@
     height: 600px;
   }
   /* Good Time Brewing Mobile Section */
+  .gtbFirstPhoto {
+    background: url("/gtbFirst.jpg") center / cover no-repeat;
+    height: 600px;
+    width: 80vw;
+    margin: 0 auto;
+  }
 
   /* Dakota Ridge Mobile Section */
   .dkrSect {
